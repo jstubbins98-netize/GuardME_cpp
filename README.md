@@ -84,7 +84,7 @@ the GuardME program files come as a zip archive. You will need to extract and/or
 1. click on the `guardme_cpp-main.zip` archive that you downloaded from this repository
 2. in the menu that pops up click the `extract` option then choose your downloads folder as the destination then confirm.    
 3. Run: cd `~/downloads/guardme_cpp-main/guardme_cpp.zip`  
-4. After you have changed the directory to the zip archive you should see the file’s path in behind your terminal cursor.
+4. After you have changed the directory to the zip archive you should see the file’s path behind your terminal cursor.
 5. Run: `unzip guardme_cpp.zip`  
 6. After unzipping the archive, proceed with the setup.
 
