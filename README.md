@@ -76,7 +76,7 @@ Note: All network features require an active internet connection. The applicatio
 the GuardME program files comes as a zip archive. You will need to extract and/or unzip the zip archive before installing guardME here’s how to do that:
 
 **macOS**
-1. Open the downloaded folder that contains the Guardme\_cpp.zip archive  
+1. Open the guardme\_cpp-main folder that contains the Guardme\_cpp.zip archive
 2. Click the zip to run archive utility (which is a built in macOS application) this will unzip the file into a folder.  
 3. After unzipping the archive, proceed with the setup.
 
