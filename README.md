@@ -73,7 +73,7 @@ The GUI version provides a full graphical interface with tabs, buttons, and visu
 Note: All network features require an active internet connection. The application will still function offline but network-dependent features will be unavailable.
 
 ## **unzipping the archive**
-the GuardME program files comes as a zip archive. You will need to extract and/or unzip the zip archive before installing guardME here’s how to do that:
+the GuardME program files come as a zip archive. You will need to extract and/or unzip the zip archive before installing guardME here’s how to do that:
 
 **macOS**
 1. Open the guardme\_cpp-main folder that contains the Guardme\_cpp.zip archive
