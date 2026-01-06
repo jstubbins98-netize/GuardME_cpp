@@ -1,30 +1,9 @@
 # GuardME C++
 
-An advanced cybersecurity application providing real-time protection against malicious websites, malware, and data breaches. This is a complete C++ rewrite featuring URL analysis, virus scanning, password breach checking, system monitoring, and an interactive chatbot assistant.
-
----
-
-## Table of Contents
-
-1. [Purpose](#purpose)
-2. [Versions](#versions)
-3. [Setup](#setup)
-4. [Features](#features)
-   - [URL Threat Analysis](#url-threat-analysis)
-   - [Password Breach Checker](#password-breach-checker)
-   - [Password Generator](#password-generator)
-   - [Virus Scanner](#virus-scanner)
-   - [System Health Monitor](#system-health-monitor)
-   - [File Threat Assessment](#file-threat-assessment)
-   - [Meet Guardi - Your Security Assistant](#meet-guardi---your-security-assistant)
-   - [Download Monitor](#download-monitor)
-   - [WHOIS Lookup (GUI)](#whois-lookup-gui)
-   - [Email Protection (GUI)](#email-protection-gui)
-   - [Secure Credential Storage (GUI)](#secure-credential-storage-gui)
-5. [Project Structure](#project-structure)
-6. [Dependencies](#dependencies)
-7. [Contributing](#contributing)
-8. [License](#license)
+Introducing GuardME! An advanced cybersecurity application providing real-time protection
+against malicious websites, malware, and data breaches. This is a completely C++ written
+program featuring URL analysis, virus scanning, password breach checking, system monitoring,
+download monitoring and an interactive chatbot assistant.
 
 ---
 
