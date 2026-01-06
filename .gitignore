@@ -24,15 +24,20 @@ desktop.ini
 *.swp
 *.swo
 
-# Build artifacts
+# Build directories
 build/
+out/
+bin/
+obj/
+CMakeFiles/
+
+# Build artifacts
 *.o
 guardme_console
 GuardME
 
 # CMake generated files
 CMakeCache.txt
-CMakeFiles/
 cmake_install.cmake
 
 # Qt generated files
