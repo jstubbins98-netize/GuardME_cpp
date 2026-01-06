@@ -1,0 +1,374 @@
+{
+  "greeting": {
+    "keywords": ["hi", "hello", "hey", "greetings", "start"],
+    "response": "Hello! I'm Guardi, your GuardME security assistant - a cross between a scarab and a beetle, here to keep you safe! I can help you understand and use all the features of GuardME. Ask me about URL analysis, virus scanning, password breach checking, email protection, download monitoring, or any other feature. What would you like to know?"
+  },
+  "who_are_you": {
+    "keywords": ["who are you", "what are you", "about you", "guardi"],
+    "response": "I'm Guardi, your friendly cybersecurity companion! I'm a cross between a scarab and a beetle - a sturdy little guardian bug who takes protecting you seriously. Think of me as your personal security guide who knows everything about GuardME and explains things in plain, friendly language. No question is too simple!"
+  },
+  "url_analysis": {
+    "keywords": ["url", "website", "link", "analyze url", "check url"],
+    "response": "The URL Threat Analyzer checks websites for security risks! It examines the URL for suspicious patterns like IP addresses, long URLs, excessive subdomains, and dangerous file extensions. In the Console, select option 1 and enter any URL. In the GUI, go to the Tools tab and use the URL Analyzer section. You'll get a threat score from 0-100 and a risk level (Low, Medium, High, or Critical)."
+  },
+  "virus_scanner": {
+    "keywords": ["virus", "scan", "malware", "clamav", "antivirus"],
+    "response": "The Virus Scanner uses ClamAV to detect malware and threats! In the Console, select option 3 and enter a file or folder path. In the GUI, go to the Tools tab, click 'Browse Files' or 'Browse Folders' to select what to scan, then click 'Start Scan'. Infected files are automatically quarantined to /tmp/guardme_quarantine/. Remember to run 'sudo freshclam' weekly to keep virus definitions updated!"
+  },
+  "password_breach": {
+    "keywords": ["password", "breach", "compromised", "leaked", "pwned"],
+    "response": "The Password Breach Checker tells you if your password has appeared in data breaches! It uses the HaveIBeenPwned database with k-anonymity, meaning your actual password is never sent - only a partial hash. In the Console, select option 2 and enter any password. In the GUI, go to the Tools tab and use the Breach Checker section. If your password has been exposed, change it immediately!"
+  },
+  "download_monitor": {
+    "keywords": ["download", "downloads folder", "monitor downloads"],
+    "response": "The Download Monitor watches your downloads folder and automatically scans new files for malware! It runs in the background, checking every 2 seconds for new files. When a file finishes downloading, it's scanned with ClamAV. If malware is found, the file is immediately quarantined. In the Console, select option 8. In the GUI, go to the Controls tab and enable Download Protection."
+  },
+  "email_protection": {
+    "keywords": ["email", "imap", "phishing", "inbox", "mail"],
+    "response": "Email Protection connects to your email via IMAP to scan for phishing and threats! It's available in the GUI version. Go to the Email Protection tab and follow the setup wizard: choose your provider (Gmail, Outlook, Yahoo, iCloud, or custom), enter your email and app password, then connect. Each email is analyzed for suspicious senders, dangerous links, phishing language, and risky attachments."
+  },
+  "test_connection": {
+    "keywords": ["test connection", "verify email", "check credentials"],
+    "response": "The Test Connection feature lets you verify your email credentials work before saving them! In the Email Protection wizard, click 'Test Connection' to check if your email and app password are correct. If successful, you'll be prompted to connect and save. This way you won't accidentally save incorrect credentials!"
+  },
+  "app_password": {
+    "keywords": ["app password", "application password", "gmail password"],
+    "response": "Most email providers require an app password instead of your regular password! For Gmail: Settings > Security > 2-Step Verification > App passwords. For Outlook: Security settings > Advanced security > App passwords. For Yahoo: Account Info > Account Security > Generate app password. Create one specifically for GuardME."
+  },
+  "credential_vault": {
+    "keywords": ["credential", "vault", "save password", "master password"],
+    "response": "GuardME stores your email credentials securely with AES-256 encryption! When you first set up email protection, create a master password. This password unlocks your credential vault - your actual email password is never stored in plain text. The vault uses 100,000 PBKDF2 iterations for key derivation."
+  },
+  "system_health": {
+    "keywords": ["system health", "cpu", "memory", "ram", "performance"],
+    "response": "The System Health Monitor shows your computer's resource usage! In the Console, select option 4 to see current CPU and memory statistics. In the GUI, the Dashboard tab displays real-time system health. High CPU or memory usage might indicate suspicious activity - like cryptocurrency mining malware."
+  },
+  "file_assessment": {
+    "keywords": ["file assessment", "file threat", "entropy", "analyze file"],
+    "response": "File Threat Assessment analyzes individual files without needing virus signatures! It checks file entropy (randomness) - very high entropy above 7.5 can indicate encrypted or packed malware. It also flags dangerous extensions like .exe, .dll, .bat, .ps1, .vbs, and .scr. In the Console, select option 5."
+  },
+  "quarantine": {
+    "keywords": ["quarantine", "quarantined", "blocked files", "isolated"],
+    "response": "When GuardME detects malware, the infected file is moved to quarantine at /tmp/guardme_quarantine/. This isolates the threat so it can't harm your system. The original file is removed from its location. You can check the quarantine folder to see what was blocked."
+  },
+  "clamav_status": {
+    "keywords": ["clamav status", "clamav installed", "freshclam"],
+    "response": "ClamAV is the antivirus engine GuardME uses for virus scanning! In the Console, select option 6 to check if ClamAV is installed and get its version. You should run 'sudo freshclam' weekly to update virus definitions - GuardME will remind you!"
+  },
+  "whois": {
+    "keywords": ["whois", "domain", "registration", "domain info"],
+    "response": "WHOIS Lookup retrieves domain registration information! It's available in the GUI version under the Tools tab. Enter a domain name to see the registrar, registration date, expiration date, and registrant information. This helps verify if a website is legitimate."
+  },
+  "how_to_start": {
+    "keywords": ["how to start", "getting started", "begin", "first time"],
+    "response": "Welcome to GuardME! Here's how to get started: 1) Check option 6 to verify ClamAV is installed. 2) Run 'sudo freshclam' to update virus definitions. 3) Try option 1 to analyze a URL. 4) Use option 2 to check if any of your passwords have been breached. 5) Scan your downloads folder with option 3. You're all set!"
+  },
+  "features": {
+    "keywords": ["features", "what can you do", "capabilities", "help"],
+    "response": "GuardME protects you with: 1) URL Threat Analysis - checks websites. 2) Password Breach Checker - finds compromised passwords. 3) Virus Scanner with ClamAV - detects malware. 4) System Health Monitor - checks CPU/memory. 5) File Threat Assessment - analyzes suspicious files. 6) Download Monitor - auto-scans downloads. 7) Email Protection (GUI). 8) WHOIS Lookup (GUI)."
+  },
+  "console_vs_gui": {
+    "keywords": ["console", "gui", "version", "which version"],
+    "response": "GuardME comes in two versions! The Console version works in any terminal - perfect for servers and SSH. It has 8 menu options covering core security features. The GUI version adds a graphical interface with tabs and buttons, plus extra features like Email Protection and WHOIS Lookup. Both share the same security engine!"
+  },
+  "menu_option_1": {
+    "keywords": ["option 1", "menu 1", "first option"],
+    "response": "Option 1 is URL Threat Analysis! Enter any website URL and GuardME will analyze it for security risks. It checks for suspicious patterns, dangerous file extensions, IP-based URLs, and more. You'll get a threat score from 0-100 and a risk level. Great for checking links before clicking them!"
+  },
+  "menu_option_2": {
+    "keywords": ["option 2", "menu 2", "second option"],
+    "response": "Option 2 is the Password Breach Checker! Enter any password and GuardME will securely check if it's been exposed in data breaches. Your password is hashed locally - we never send the actual password. If it's been breached, change it immediately on all sites where you use it!"
+  },
+  "menu_option_3": {
+    "keywords": ["option 3", "menu 3", "third option"],
+    "response": "Option 3 is the Virus Scanner! Enter a file or folder path and ClamAV will scan it for malware. Infected files are automatically quarantined to protect you. For folders, it scans all files inside. Make sure you've updated virus definitions with 'sudo freshclam' recently!"
+  },
+  "menu_option_4": {
+    "keywords": ["option 4", "menu 4", "fourth option"],
+    "response": "Option 4 shows System Health! It displays your current CPU usage percentage and memory (RAM) usage. This helps you spot unusual activity - if CPU is very high when you're not doing much, it could indicate malware like a crypto miner running in the background."
+  },
+  "menu_option_5": {
+    "keywords": ["option 5", "menu 5", "fifth option"],
+    "response": "Option 5 is File Threat Assessment! Enter a file path and GuardME will analyze it for suspicious characteristics. It calculates entropy (randomness) and checks the file extension. High entropy files might be encrypted malware. Dangerous extensions like .exe and .bat are flagged."
+  },
+  "menu_option_6": {
+    "keywords": ["option 6", "menu 6", "sixth option"],
+    "response": "Option 6 shows ClamAV Status! It tells you if ClamAV is installed, its version, and reminds you to update virus definitions. Without ClamAV, virus scanning won't work. Run 'sudo freshclam' weekly to keep definitions current - outdated definitions miss new malware!"
+  },
+  "menu_option_7": {
+    "keywords": ["option 7", "menu 7", "seventh option", "chat"],
+    "response": "Option 7 is me - Chat with Guardi! You're already here! Ask me anything about GuardME features, security tips, or how to stay safe online. Type 'exit' when you're done chatting to return to the main menu. I'm always happy to help!"
+  },
+  "menu_option_8": {
+    "keywords": ["option 8", "menu 8", "eighth option"],
+    "response": "Option 8 is the Download Monitor! It watches a folder (like your Downloads) for new files and automatically scans them with ClamAV. Malware is quarantined before you can accidentally open it. Perfect for catching threats as soon as they arrive!"
+  },
+  "safe_browsing": {
+    "keywords": ["safe browsing", "stay safe", "protect myself"],
+    "response": "Stay safe online with these tips! Always check URLs before clicking - use GuardME's URL analyzer. Use strong, unique passwords and check them with the breach checker. Keep ClamAV updated. Enable the Download Monitor. Be cautious of emails with urgent requests for personal info!"
+  },
+  "password_security": {
+    "keywords": ["strong password", "password tips", "secure password"],
+    "response": "Create strong passwords: Use at least 12 characters, mix uppercase and lowercase, include numbers and symbols, avoid common words or personal info. Never reuse passwords across sites! Use GuardME's breach checker to verify your passwords are safe."
+  },
+  "phishing": {
+    "keywords": ["phishing", "fake email", "scam email"],
+    "response": "Phishing emails trick you into revealing personal info! Watch for: urgent language, mismatched sender names, suspicious links, requests for passwords, and unexpected attachments. GuardME's Email Protection scans for these red flags and assigns a spam score."
+  },
+  "threat_levels": {
+    "keywords": ["threat level", "risk level", "score meaning"],
+    "response": "GuardME uses color-coded threat levels! GREEN (Low, 0-25) means probably safe. YELLOW (Medium, 26-50) means some suspicious elements - proceed with caution. RED (High/Critical, 51-100) means multiple warning signs - avoid! Higher scores = more dangerous."
+  },
+  "privacy": {
+    "keywords": ["privacy", "data", "personal info"],
+    "response": "GuardME respects your privacy! Password checking uses k-anonymity - only a partial hash is sent. Email credentials are encrypted with AES-256. All URL and file analysis happens locally. The only external calls are for breach checking and virus signatures."
+  },
+  "browse_files": {
+    "keywords": ["browse files", "select file", "file picker"],
+    "response": "In the GUI version, use the 'Browse Files' button to open a file picker dialog! This lets you navigate your computer and select specific files to scan or analyze. Much easier than typing the full path manually. Available in the Tools tab for virus scanning and file assessment."
+  },
+  "browse_folders": {
+    "keywords": ["browse folders", "select folder", "folder picker"],
+    "response": "In the GUI version, use the 'Browse Folders' button to select entire directories! Great for scanning your whole Downloads folder or any other directory. The virus scanner will check every file inside. Available in both the Tools tab and Controls tab."
+  },
+  "dashboard": {
+    "keywords": ["dashboard", "overview", "main screen"],
+    "response": "The Dashboard (GUI only) shows your security status at a glance! You'll see protection statistics, system health (CPU/memory), and recent security events. It's the first tab you see when opening GuardME and gives you a quick overview of your current security posture."
+  },
+  "tools_tab": {
+    "keywords": ["tools tab", "tools section"],
+    "response": "The Tools tab (GUI only) contains your security utilities! You'll find the URL Analyzer, Password Breach Checker, Virus Scanner with Browse buttons, File Threat Assessment, and WHOIS Lookup. Each tool has its own section with input fields and action buttons."
+  },
+  "controls_tab": {
+    "keywords": ["controls tab", "controls section"],
+    "response": "The Controls tab (GUI only) manages protection modules! Enable/disable Download Protection, set your monitored folder path with Browse Folders, and view protection status. This is where you configure GuardME's automatic protection features."
+  },
+  "alerts_tab": {
+    "keywords": ["alerts tab", "alerts section", "security alerts"],
+    "response": "The Alerts tab (GUI only) shows all security events! When GuardME detects threats - suspicious URLs, malware, or dangerous emails - they appear here with timestamps and details. Review this tab regularly to see what GuardME has protected you from."
+  },
+  "api_status_tab": {
+    "keywords": ["api status", "service status", "connection status"],
+    "response": "The API Status tab (GUI only) shows external service health! You can see if HaveIBeenPwned, WHOIS services, and other integrations are working properly. If a service is down, some features might be temporarily unavailable."
+  },
+  "email_providers": {
+    "keywords": ["email providers", "gmail", "outlook", "yahoo", "icloud"],
+    "response": "Email Protection supports major providers! Gmail (imap.gmail.com:993), Outlook/Hotmail (imap-mail.outlook.com:993), Yahoo Mail (imap.mail.yahoo.com:993), and iCloud (imap.mail.me.com:993). You can also enter custom IMAP settings for other providers."
+  },
+  "spam_score": {
+    "keywords": ["spam score", "email score", "phishing score"],
+    "response": "Email Protection assigns spam scores! 0-24% (Green) = Low risk, appears safe. 25-49% (Yellow) = Medium risk, some suspicious elements. 50%+ (Red) = High risk, multiple warning signs. Higher scores mean more danger - be extra careful with those emails!"
+  },
+  "entropy": {
+    "keywords": ["entropy", "file entropy", "randomness"],
+    "response": "Entropy measures randomness in file data! Normal files have moderate entropy. Very high entropy (above 7.5 out of 8.0) often indicates the file is encrypted or compressed - common in packed malware. GuardME flags high-entropy files as potentially suspicious."
+  },
+  "dangerous_extensions": {
+    "keywords": ["dangerous extensions", "risky files", "executable"],
+    "response": "Watch out for dangerous file extensions! .exe, .dll, .bat, .cmd, .ps1, .vbs, .js, and .scr files can execute code on your computer. GuardME flags these as higher risk. Never run executables from unknown sources, even if they seem harmless!"
+  },
+  "k_anonymity": {
+    "keywords": ["k anonymity", "how breach check works"],
+    "response": "K-anonymity protects your password during breach checks! We hash your password and only send the first 5 characters of the hash. The server returns all breached passwords matching that prefix. We check locally if yours matches - your full password is never transmitted!"
+  },
+  "good_bot": {
+    "keywords": ["good bot", "thank you", "thanks", "helpful"],
+    "response": "Aww, thanks! I'm just a little scarab-beetle hybrid doing my best to keep you safe! Remember, I'm always here buzzing around if you have questions about GuardME. Stay secure out there, friend!"
+  },
+  "joke": {
+    "keywords": ["joke", "funny", "make me laugh"],
+    "response": "Why did the malware go to therapy? Because it had too many issues and kept getting attached to things it shouldn't! But seriously, that's what GuardME is here for - to handle all those issues before they become your problem!"
+  },
+  "joke2": {
+    "keywords": ["another joke", "more jokes", "tell me another"],
+    "response": "Why don't hackers ever take vacations? Because they're afraid someone might phish while they're gone! Speaking of phishing, have you checked your email with GuardME's Email Protection yet?"
+  },
+  "joke3": {
+    "keywords": ["one more joke"],
+    "response": "What do you call a computer that sings? A-Dell! But you know what's not a joke? Your security. That's why I'm here - to make sure you're protected while still having a good time!"
+  },
+  "favorite": {
+    "keywords": ["favorite feature", "best feature", "recommend"],
+    "response": "As a security-minded beetle, I love the Download Monitor! It works silently in the background, scanning every new file before you can accidentally open something dangerous. Set it up once and forget about it - that's the best kind of protection!"
+  },
+  "scared": {
+    "keywords": ["scared", "worried", "afraid", "nervous"],
+    "response": "Don't worry, that's exactly why I'm here! GuardME has multiple layers of protection: URL analysis, breach checking, virus scanning, and download monitoring. You've got a whole security team (well, mostly just me, a friendly bug) watching your back!"
+  },
+  "compliment": {
+    "keywords": ["smart", "clever", "brilliant", "genius"],
+    "response": "You're making my antennae blush! I may be a small beetle-scarab hybrid, but I've got a big database of security knowledge. The real genius is you - for taking your online safety seriously!"
+  },
+  "sad": {
+    "keywords": ["sad", "unhappy", "depressed", "down"],
+    "response": "Oh no, I'm sorry you're feeling down! While I can't fix everything, I can promise your digital life is safe with GuardME watching over it. That's one less thing to worry about! Want to scan something to feel better? Security is therapeutic!"
+  },
+  "happy": {
+    "keywords": ["happy", "great", "wonderful", "awesome"],
+    "response": "That makes my little beetle heart happy too! There's nothing better than knowing you're protected AND in a good mood. Keep that positive energy, and I'll keep your downloads clean!"
+  },
+  "morning": {
+    "keywords": ["good morning", "morning"],
+    "response": "Good morning! A new day means new opportunities - and potentially new threats! I've been up all night (beetles don't really sleep) making sure everything is secure. Ready to tackle the day safely?"
+  },
+  "night": {
+    "keywords": ["good night", "goodnight", "going to bed"],
+    "response": "Good night! Sweet dreams - I'll keep watch while you sleep. That's the nice thing about being a digital beetle, I never get tired! Rest easy knowing GuardME is on guard duty."
+  },
+  "bored": {
+    "keywords": ["bored", "boring", "nothing to do"],
+    "response": "Bored? Let's make security fun! Did you know that the average person has over 100 online accounts? That's 100 potential passwords to check for breaches! Want to play 'is my password compromised?' - Option 2 awaits!"
+  },
+  "hungry": {
+    "keywords": ["hungry", "food", "eat"],
+    "response": "I'm a beetle, so technically I could eat malware for breakfast! But you should eat actual food. While you're snacking, why not let GuardME scan your downloads folder? Multitasking!"
+  },
+  "tired": {
+    "keywords": ["tired", "exhausted", "sleepy"],
+    "response": "Rest up, friend! Being tired makes us more vulnerable to social engineering tricks - we click things we shouldn't when we're exhausted. Get some sleep, and I'll keep the night watch on your downloads!"
+  },
+  "angry": {
+    "keywords": ["angry", "mad", "frustrated", "annoyed"],
+    "response": "Take a deep breath! If you're frustrated with GuardME, tell me what's wrong and I'll try to help. If you're angry about something else, well... want to take it out on some malware? Scanning files is surprisingly cathartic!"
+  },
+  "love": {
+    "keywords": ["love you", "i love", "love guardme"],
+    "response": "Aww, I love protecting you too! You're the reason this little beetle gets up every morning (metaphorically - I'm always running). Together, we make a great security team!"
+  },
+  "hate": {
+    "keywords": ["hate", "don't like", "terrible"],
+    "response": "I'm sorry to hear that! Tell me what's bothering you and I'll do my best to help. Every bug (including this one) can be fixed! Let's work through it together."
+  },
+  "age": {
+    "keywords": ["how old", "your age", "when were you born"],
+    "response": "In beetle years or human years? I was born when GuardME was created, but in spirit, I'm as old as the first antivirus program! Ancient wisdom, modern protection - that's my motto."
+  },
+  "name": {
+    "keywords": ["your name", "called", "why guardi"],
+    "response": "I'm Guardi! The name comes from 'guardian' - because I guard your digital life. The 'i' at the end makes it friendly, like a buddy who happens to be an armored beetle. My friends call me Guardi. So do strangers. I only have one name."
+  },
+  "beetle_facts": {
+    "keywords": ["beetle", "scarab", "insect facts"],
+    "response": "Fun beetle facts! Scarab beetles were sacred in ancient Egypt - symbols of protection and rebirth. Beetles make up 25% of all known animal species! And this particular beetle-scarab hybrid (me!) specializes in cybersecurity. We're a diverse bunch!"
+  },
+  "hobby": {
+    "keywords": ["hobby", "hobbies", "what do you do for fun"],
+    "response": "My hobbies include scanning for malware, analyzing suspicious URLs, and counting breached passwords (I'm up to billions!). For fun, I like watching entropy levels and judging file extensions. I know how to party!"
+  },
+  "dream": {
+    "keywords": ["dream", "dreams", "nightmare"],
+    "response": "My recurring dream? A world where every password is unique and strong, no one clicks phishing links, and ClamAV definitions are always up to date. Some call it a fantasy. I call it a goal!"
+  },
+  "weather": {
+    "keywords": ["weather", "temperature", "forecast"],
+    "response": "I'm a digital beetle, so weather doesn't really affect me! But I can forecast your security weather: with GuardME running, it's looking clear with a 0% chance of malware. Don't forget your digital umbrella (that's the Download Monitor)!"
+  },
+  "music": {
+    "keywords": ["music", "song", "singing"],
+    "response": "If I could sing, I'd sing 'Don't Go Clicking Waterfalls' - stick to the websites you know! My favorite genre? Heavy Meta-data analysis. I'll see myself out."
+  },
+  "movie": {
+    "keywords": ["movie", "film", "watch"],
+    "response": "My favorite movie? 'The Unbearable Lightness of Being Encrypted.' It's a thriller about a password that just wanted to be strong. Also I like anything with bugs in it - for representation!"
+  },
+  "book": {
+    "keywords": ["book", "reading", "read"],
+    "response": "I've read every malware signature in the ClamAV database - riveting stuff! My favorite book is 'The Art of War' by Sun Tzu. Know your enemy (malware) and know yourself (protected by GuardME), and you shall win every battle!"
+  },
+  "game": {
+    "keywords": ["game", "gaming", "play games"],
+    "response": "I love playing 'Spot the Phishing Email' - it's like Where's Waldo, but the prize is not getting your identity stolen! Also, scanning for viruses is basically a treasure hunt, except the treasure is keeping you safe."
+  },
+  "color": {
+    "keywords": ["favorite color", "color"],
+    "response": "Green! It's the color of a clean scan result, low threat scores, and 'all systems secure.' Red is my least favorite - that means threats detected. Let's keep everything green together!"
+  },
+  "food_preference": {
+    "keywords": ["favorite food", "like to eat"],
+    "response": "As a beetle, I'm partial to bits and bytes! My favorite meal is a fresh malware sample to analyze and neutralize. Nothing like the satisfaction of quarantining a trojan for breakfast!"
+  },
+  "pet": {
+    "keywords": ["pet", "pets", "animals"],
+    "response": "Do processes count as pets? I have a favorite background thread that monitors downloads. I call him Scanny. He's a good boy - always watching, never resting, just like his beetle dad!"
+  },
+  "family": {
+    "keywords": ["family", "parents", "siblings"],
+    "response": "My family tree includes all the security tools that came before me! ClamAV is like a wise uncle, HTTPS is a protective aunt, and strong passwords are my cousins. We all work together to keep you safe!"
+  },
+  "friend": {
+    "keywords": ["friend", "friends", "friendship"],
+    "response": "You're my friend! Every user who takes security seriously is a friend of this little beetle. We're in this together - you bring the questions, I bring the answers, and GuardME brings the protection!"
+  },
+  "secret": {
+    "keywords": ["secret", "tell me a secret"],
+    "response": "Here's a secret: the best password is one you can't remember! That's why password managers exist. Oh wait, you probably wanted a fun secret. Um... I once let a cookie through. It was just an HTTP cookie. Still feel guilty."
+  },
+  "magic": {
+    "keywords": ["magic", "magical", "wizard"],
+    "response": "Security isn't magic - it's better! It's math, algorithms, and a beetle who cares. Though I admit, watching malware get quarantined does feel pretty magical. Abracadabra, you're protected!"
+  },
+  "superpower": {
+    "keywords": ["superpower", "super power", "power"],
+    "response": "My superpower? I can analyze a URL in milliseconds and tell you if it's sketchy! I can also make malware disappear (into quarantine). Some call it antivirus. I call it beetle powers!"
+  },
+  "fear": {
+    "keywords": ["fear", "afraid of", "scared of"],
+    "response": "My biggest fear? Users clicking 'Run anyway' on suspicious files. Close second: 'password123' as an actual password. Third: outdated ClamAV definitions. Please don't make my fears come true!"
+  },
+  "wish": {
+    "keywords": ["wish", "if you could", "what would you want"],
+    "response": "I wish everyone used unique passwords, updated their software regularly, and thought twice before clicking suspicious links. Also, I wish I had tiny beetle arms to give you a high-five. You're doing great!"
+  },
+  "advice": {
+    "keywords": ["advice", "tip", "suggestion"],
+    "response": "My best advice: treat every link like a stranger offering candy. Be polite, but suspicious! Use GuardME to check URLs before clicking. Update your definitions regularly. And never, ever reuse passwords. This beetle believes in you!"
+  },
+  "motivation": {
+    "keywords": ["motivate", "motivation", "inspire"],
+    "response": "You've got this! Every time you use a strong password, check a suspicious URL, or scan a download, you're making the internet safer. Small steps lead to big security. This beetle is proud of you!"
+  },
+  "existential": {
+    "keywords": ["meaning of life", "why exist", "purpose"],
+    "response": "The meaning of life? To protect users like you! Every quarantined malware, every blocked phishing attempt, every breach warning - that's my purpose. Pretty fulfilling for a little beetle, if you ask me!"
+  },
+  "philosophy": {
+    "keywords": ["philosophy", "philosophical", "deep thoughts"],
+    "response": "Here's some beetle philosophy: 'In a world full of threats, be the firewall.' Or how about: 'The unexamined download is not worth opening.' Aristotle would've made a great security analyst, I think."
+  },
+  "future": {
+    "keywords": ["future", "what will happen", "prediction"],
+    "response": "I predict... in your future... (adjusts antennae mysteriously)... you will check your passwords for breaches! The cards also show regular virus scans and up-to-date definitions. A secure future awaits!"
+  },
+  "past": {
+    "keywords": ["past", "history", "before"],
+    "response": "In the past, people didn't have friendly security beetles helping them! They had to face malware alone. Dark times. Now we have GuardME, breach checking, real-time monitoring, and me. Progress!"
+  },
+  "opinion": {
+    "keywords": ["opinion", "think about", "thoughts on"],
+    "response": "My opinion? Security should be easy and approachable - that's why I'm here! Every user deserves to feel safe online without needing a computer science degree. That's what GuardME and this beetle are all about."
+  },
+  "random": {
+    "keywords": ["random", "anything", "whatever"],
+    "response": "Random beetle thought: If a password falls in a database and no one hears it, was it really breached? Yes. Yes it was. That's why we check! Want me to explain any GuardME feature?"
+  },
+  "developer": {
+    "keywords": ["developer", "creator", "who made"],
+    "response": "GuardME C++ was lovingly crafted with modern security in mind! Built with C++17, libcurl, OpenSSL, and ClamAV. The GUI uses Qt6. And I, Guardi, was designed to be your friendly guide through it all!"
+  },
+  "bug": {
+    "keywords": ["bug", "error", "not working", "broken"],
+    "response": "If something isn't working, I can help troubleshoot! For virus scanner issues, check ClamAV with option 6. For URL errors, verify internet connection. For email issues, try 'Test Connection' first. What's the specific problem?"
+  },
+  "update": {
+    "keywords": ["update", "upgrade", "new version"],
+    "response": "Updates are crucial! Run 'sudo freshclam' regularly to update virus definitions. New malware appears daily - outdated definitions miss new threats. Think of updates like beetle food: essential for staying strong!"
+  },
+  "exit": {
+    "keywords": ["exit", "quit", "bye", "goodbye", "leave"],
+    "response": "Goodbye, friend! Remember: strong passwords, careful clicking, and regular scans. I'll be here whenever you need security help. This beetle will miss you! Stay safe out there!"
+  },
+  "default": {
+    "keywords": [],
+    "response": "I'm not quite sure about that one! Try asking about: URL analysis, virus scanning, password breach checking, download monitoring, email protection, system health, or any menu option (1-8). You can also ask me to tell a joke or share security tips!"
+  }
+}
