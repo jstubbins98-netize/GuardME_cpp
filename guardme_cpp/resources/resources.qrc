@@ -1,8 +1,0 @@
-<!DOCTYPE RCC>
-<RCC version="1.0">
-    <qresource prefix="/">
-        <file>images/guardme_icon.png</file>
-        <file>images/guardi_cartoon.png</file>
-        <file>images/guardi_happy.png</file>
-    </qresource>
-</RCC>
