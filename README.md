@@ -606,27 +606,6 @@ guardme_cpp/
 
 ---
 
-## Dependencies
-
-### Console Version
-| Dependency | Purpose |
-|------------|---------|
-| libcurl | HTTP requests to APIs |
-| OpenSSL | SHA-1 hashing for breach checks |
-| ClamAV | Virus scanning (optional) |
-
-### GUI Version
-| Dependency | Purpose |
-|------------|---------|
-| Qt6 | Graphical interface |
-| libcurl | HTTP requests |
-| OpenSSL | Cryptographic functions |
-| nlohmann-json | JSON parsing |
-| ClamAV | Virus scanning (optional) |
-| espeak | Text-to-speech for Guardi (Linux) |
-
----
-
 ## Contributing
 
 Contributions are welcome and appreciated! Whether you're fixing bugs, adding new features, improving documentation, or suggesting ideas, your help makes GuardME better for everyone.
