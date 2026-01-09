@@ -662,7 +662,6 @@ Quick Comparison
 
 Recommendation  
 We recommend the GUI version for the following two reasons:
-
 1. It is easier to operate   
 2. There are more features available then there are in the console version simply because they aren’t possible in the console version.
 
