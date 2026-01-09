@@ -603,7 +603,70 @@ guardme_cpp/
     ├── guardme_console     # Console executable
     └── GuardME             # GUI executable
 ```
+## So what’s the difference?  
+As mentioned earlier there are two versions of GuardME: a console and a GUI version. But the two versions are slightly different in terms of functionality, where they can be run and how they operate. Here's the difference:   
+Console Version
 
+* **Interface:** Text-based menu in the terminal  
+* **Works in:** Any environment (cloud, SSH, servers, headless systems)  
+* **Dependencies:** Just libcurl and OpenSSL  
+* **File:** Single `console_main.cpp` (\~1,500 lines)
+
+**Features:**
+
+* URL threat analysis  
+* Password breach checking  
+* Password generator  
+* Virus scanning with ClamAV  
+* System health monitoring  
+* File threat assessment  
+* Chat with Guardi (text only)  
+* Download folder monitoring
+
+---
+
+GUI Version
+
+* **Interface:** Graphical window with tabs, buttons, and widgets  
+* **Works in:** Desktop systems with a display and OpenGL  
+* **Dependencies:** Qt6, libcurl, OpenSSL, nlohmann-json, espeak (optional)  
+* **Files:** Multiple source files across `gui/`, `core/`, `security/`, `network/`, `utils/` directories
+
+**Everything in Console, plus:**
+
+* Visual dashboard with security statistics  
+* WHOIS domain lookup  
+* Email Protection with IMAP integration  
+* Encrypted credential vault with master password  
+* Guardi with cartoon expressions (happy/distressed images)  
+* Text-to-speech for Guardi responses  
+* Application icon and desktop launcher  
+* Scrollable tabs and modern UI
+
+---
+
+Quick Comparison
+
+| Feature | Console | GUI |
+| ----- | ----- | ----- |
+| URL Analysis | Yes | Yes |
+| Password Breach Check | Yes | Yes |
+| Password Generator | Yes | Yes \+ Clipboard Copy |
+| Virus Scanning | Yes | Yes |
+| System Health | Yes | Yes \+ Visual Dashboard |
+| Guardi Chatbot | Text only | Images \+ TTS |
+| Email Protection | No | Yes |
+| Credential Vault | No | Yes |
+| WHOIS Lookup | No | Yes |
+| Works in Cloud | Yes | No |
+
+Recommendation  
+We recommend the GUI version for the following two reasons:
+
+1. It is easier to operate   
+2. There are more features available then there are in the console version simply because they aren’t possible in the console version.
+
+**Note:** While the GUI version is great in some areas it does have some flaws. First it requires a system with OpenGL support (I.e. a desktop environment). Another flaw is that there is currently no Microsoft Windows support meaning there is no way to install the GUI version of the program on Microsoft Windows although it is possible to install the console version on Microsoft Windows using WSL.  
 ---
 
 ## Contributing
